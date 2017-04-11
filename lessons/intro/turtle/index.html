@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="cs">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>
+            
+                Želva a cykly
+            
+        </title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+        
+
+        <link rel="stylesheet" href="/static/css/nausce.css">
+        <link rel="stylesheet" href="/static/css/body.css">
+        <link rel="stylesheet" href="/static/css/pygments-lovelace-style.css">
+        <link rel="stylesheet" href="/static/css/ipython.css">
+
+        
+
+        
+        
+
+        <style>
+            
+    
+
+        </style>
+    </head>
+    
+    <body>
+        
+        <nav class="header">
+            <ul class="container menu">
+                <li><a href="/" class="logo"><h1>Nauč se Python!</h1></a></li>
+                <li><a href="/courses/" class="menu-link"><h2>Materiály</h2></a></li>
+                <li><a href="/runs/" class="menu-link"><h2>Kurzy</h2></a></li>
+            </ul>
+        </nav>
+        
+
+        
+            <div class="content">
+                <div class="alert alert-danger" role="alert">
+                    <div class="container">Tato stránka je momentálně v rekonstrukci.
+                    Pokud se chcete podílet na vylepšování těchto stránek,
+                    navštivte repozitář na
+                    <a href="https://github.com/pyvec/naucse.python.cz">GitHubu</a>.</div>
+                </div>
+            </div>
+        
+
+        
+
+<div class="page">
+    <div class="container">
+
+        
+
+        
+            <h1>🐍 🐢</h1>
+<p>V této lekci si vyzkoušíš <em>želví kreslení</em>.</p>
+<p>Pusť Python v <em>interaktivním módu</em> (bez souboru .py).</p>
+<div class="highlight"><pre><span></span><span class="go">$ python</span>
+
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div><div class="admonition note"><p>(Znaky <code>&gt;</code> a <code>$</code> píše počítač, ne ty.
+Na Windows bude místo <code>$</code> znak
+<code>&gt;</code>, a před <code>$</code> nebo
+<code>&gt;</code> může být ještě něco dalšího.)</p>
+</div><p>Pak napiš:</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="n">forward</span>
+
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</pre></div><p>Ukáže se okýnko se šipkou, které nezavírej.
+Dej ho tak, abys viděla i příkazovou řádku
+i nové okýnko.</p>
+<h2>A kde je ta želva?</h2>
+<p>Želva je převlečená za šipku. Ale dá se odmaskovat:</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="n">shape</span>
+
+<span class="n">shape</span><span class="p">(</span><span class="s1">&#39;turtle&#39;</span><span class="p">)</span>
+</pre></div><h2>Otáčení</h2>
+<p>Želva se umí otáčet a lézt po papíře.
+Na ocase má připevněný štětec, kterým kreslí čáru.</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span>
+
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">right</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</pre></div><p>Zkus chvíli dávat želvě příkazy.
+Když se něco nelíbí, můžeš buď zavřít kreslící okno
+nebo naimportovat a použít funkci <code>clear()</code>.</p>
+<h2>Želví program</h2>
+<p>Interaktivní mód je skvělý na hraní,
+ale teď přejdeme zase na soubory.</p>
+<p>Vytvoř si soubor <code><span class="pythondir">~/naucse-python</span>/03/zelva.py</code>.</p>
+<div class="admonition note"><p>Adresář <code class="pythondir">~/naucse-python</code>
+se u tebe může jmenovat jinak – viz <a href="/lessons/beginners/install/">instalace Pythonu</a>.</p>
+</div><p>Jestli chceš pro soubor použít jiné jméno, můžeš, ale 
+nepojmenovávej ho <code>turtle.py</code>.</p>
+<p>Do souboru napiš příkazy na nakreslení obrázku,
+a na konec zavolej funkci <code>exitonclick</code>
+(importovanou z modulu <code>turtle</code>).</p>
+<div class="admonition note"><p class="admonition-title">Otázka</p>
+<p>Co dělá funkce <code>exitonclick</code>?</p>
+</div><p>Až ti budeš mít hotové, zkusíme začít kreslit
+obrázky:</p>
+<h3>Čtverec</h3>
+<p>Nakresli čtverec.</p>
+<p><img src="/lessons/intro/turtle/static/turtle-square.png" alt="Želví čtverec"></p>
+<p>Čtverec má čtyři rovné strany,
+a čtyři rohy po 90°.</p>
+<div class="solution" id="solution-0">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="/lessons/intro/turtle/index/solutions/0/"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="n">forward</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">exitonclick</span>
+
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+
+<span class="n">exitonclick</span><span class="p">()</span>
+</pre></div>
+    </div>
+</div><h3>Obdélník</h3>
+<p>Nakresli obdélník.</p>
+<p>Zkus zařídit, aby se po nakreslení „dívala” želva doprava (tak jako na začátku).</p>
+<p><img src="/lessons/intro/turtle/static/turtle-rect.png" alt="Želví obdélník"></p>
+<div class="solution" id="solution-1">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="/lessons/intro/turtle/index/solutions/1/"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="n">forward</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">exitonclick</span>
+
+<span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+
+<span class="n">exitonclick</span><span class="p">()</span>
+</pre></div>
+    </div>
+</div><h3>Tři čtverce</h3>
+<p>Nakresli tři čtverce, každý otočený třeba o 20°.</p>
+<p><img src="/lessons/intro/turtle/static/turtle-squares.png" alt="Tři želví čtverce"></p>
+<div class="solution" id="solution-2">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="/lessons/intro/turtle/index/solutions/2/"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="n">forward</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">exitonclick</span>
+
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+
+<span class="n">left</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+
+<span class="n">left</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+
+<span class="n">exitonclick</span><span class="p">()</span>
+</pre></div>
+    </div>
+</div><h3>Jde to líp?</h3>
+<p>Tolik kódu! Tohle musí jít nějak zjednodušit!</p>
+<p>Jde.
+Pojďme se naučit příkaz <code>for</code>.</p>
+<h2>Opakování</h2>
+<p>Zkus co dělá následující program.
+Ulož ho třeba do
+<code><span class="pythondir">~/naucse-python</span>/03/cyklus.py</code></p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">cislo</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">cislo</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">pozdrav</span> <span class="ow">in</span> <span class="s1">&#39;Ahoj&#39;</span><span class="p">,</span> <span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;Hola&#39;</span><span class="p">,</span> <span class="s1">&#39;Hei&#39;</span><span class="p">,</span> <span class="s1">&#39;SYN&#39;</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">pozdrav</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+</pre></div><p>Co dělá příkaz <code>for</code>?</p>
+<div class="solution" id="solution-3">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="/lessons/intro/turtle/index/solutions/3/"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <p>Příkaz <code>for</code> opakuje část programu.
+Opakují se příkazy, které jsou pod <code>for</code>-em odsazené.
+podobně jako se <code>if</code> vztahuje jen na odsazené příkazy pod ním.</p>
+<p>Příkaz <code>for x in range(n):</code> opakuje příkazy pod ním <var>n</var>-krát,
+a proměnnou <code>x</code> nastaví postupně na čísla od 0 do <var>n</var>-1.</p>
+<p>Příkaz <code>for x in a, b, c, d, ...:</code> opakuje příkazy pod ním;
+proměnnou <code>x</code> nastavuje postupně na <var>a</var>, <var>b</var>,
+<var>c</var> <var>d</var>, ...</p>
+
+    </div>
+</div><h3>Přepisování proměnných</h3>
+<p>Zkus popsat, jak pracuje následující program.</p>
+<div class="highlight"><pre><span></span><span class="n">soucet</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">cislo</span> <span class="ow">in</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">21</span><span class="p">:</span>
+    <span class="n">soucet</span> <span class="o">=</span> <span class="n">soucet</span> <span class="o">+</span> <span class="n">cislo</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">soucet</span><span class="p">)</span>
+</pre></div><div class="solution" id="solution-4">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="/lessons/intro/turtle/index/solutions/4/"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <p>Příkaz <code>soucet = soucet + cislo</code> vypočítá hodnotu
+<code>soucet + cislo</code>, tedy přičte aktuální číslo k součtu,
+a výsledek uloží do proměnné <code>soucet</code>.
+Nová hodnota součtu se pak použije v dalším průchodu cyklem.</p>
+<p>Na začátku je součet 0, a na konci se součet všech čísel vypíše.</p>
+
+    </div>
+</div><h3>Čtverec</h3>
+<p>A znovu ke kreslení, tentokrát s použitím cyklů.</p>
+<p>Nakresli čtverec.</p>
+<p>V programu použij <code>forward</code> jen dvakrát:
+jednou v importu, jednou jako volání.</p>
+<p><img src="/lessons/intro/turtle/static/turtle-square.png" alt="Želví čtverec"></p>
+<div class="solution" id="solution-5">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="/lessons/intro/turtle/index/solutions/5/"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="n">forward</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">exitonclick</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+
+<span class="n">exitonclick</span><span class="p">()</span>
+</pre></div>
+    </div>
+</div><h3>Přerušovaná čára</h3>
+<p>Funkce <code>penup</code> a <code>pendown</code>
+z modulu <code>turtle</code> řeknou želvě,
+aby přestala, resp. začala kreslit.</p>
+<p>Zkus nakreslit přerušovanou čáru.</p>
+<p><img src="/lessons/intro/turtle/static/turtle-dashed.png" alt="Želva a přerušovaná čára"></p>
+<div class="solution" id="solution-6">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="/lessons/intro/turtle/index/solutions/6/"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="n">forward</span><span class="p">,</span> <span class="n">penup</span><span class="p">,</span> <span class="n">pendown</span><span class="p">,</span> <span class="n">exitonclick</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">penup</span><span class="p">()</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">pendown</span><span class="p">()</span>
+
+<span class="n">exitonclick</span><span class="p">()</span>
+</pre></div>
+    </div>
+</div><p>Pak zkus zařídit, aby jednotlivé čárky byly postupně
+větší a větší.</p>
+<p><img src="/lessons/intro/turtle/static/turtle-dashed2.png" alt="Želva a přerušovaná čára"></p>
+<div class="admonition note"><p class="admonition-title">Nápověda</p>
+<p>Co přesně dělá příkaz <code>for</code>?
+Dá se využít proměnná, kterou nastavuje?</p>
+</div><div class="solution" id="solution-7">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="/lessons/intro/turtle/index/solutions/7/"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="n">forward</span><span class="p">,</span> <span class="n">penup</span><span class="p">,</span> <span class="n">pendown</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">exitonclick</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+    <span class="n">forward</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">penup</span><span class="p">()</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">pendown</span><span class="p">()</span>
+
+<span class="n">exitonclick</span><span class="p">()</span>
+</pre></div>
+    </div>
+</div><h3>Tři čtverce</h3>
+<p>Nakonec nakresli 3 čtverce, každý otočený o 20°.
+Tentokrát už víš, jak to dělat chytře: opakuj pomocí příkazu
+<code>for</code>, ne kopírováním kódu.</p>
+<p><img src="/lessons/intro/turtle/static/turtle-squares.png" alt="Tři želví čtverce"></p>
+<div class="solution" id="solution-8">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="/lessons/intro/turtle/index/solutions/8/"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="n">forward</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">speed</span><span class="p">,</span> <span class="n">exitonclick</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+        <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="n">exitonclick</span><span class="p">()</span>
+</pre></div>
+    </div>
+</div><h2>Úkol navíc</h2>
+<p>Máš-li hotovo, zkus nakreslit schody:</p>
+<p><img src="/lessons/intro/turtle/static/turtle-stairs.png" alt="Želví schody"></p>
+<p>A máš-li i schody, zkus nakreslit těchto šest (nebo sedm?) šestiúhelníků:</p>
+<p><img src="/lessons/intro/turtle/static/turtle-hexagons.png" alt="Želví plástev"></p>
+
+        
+
+        <hr class="lesson-end">
+
+        
+
+        
+            <div class="lesson-attribution">
+                
+                    <p>Pro PyLadies Brno napsal Petr Viktorin, 2014-2017.</p>
+
+                
+                
+                    <p>
+                        Licence:
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/">
+                            Creative Commons Attribution-ShareAlike 4.0 International
+                        </a>
+                    </p>
+                
+            </div>
+        
+
+    </div>
+</div>
+
+
+
+        <script type="text/javascript" src="/static/js/solutions.js"></script>
+
+        
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2>Kontakt</h2>
+                        <p>
+                            E-mail: <a href="mailto:info@pyvec.org">info@pyvec.org</a><br>
+                            GitHub: <a href="http://github.com/pyvec">github.com/pyvec</a><br>
+                            Twitter: <a href="http://twitter.com/pyvec">@pyvec</a><br>
+                            Youtube: <a href="http://www.youtube.com/pyvec">www.youtube.com/pyvec</a>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <h2>Zapoj se</h2>
+                        <p>
+                            Tyto stránky na <a href="https://github.com/pyvec/naucse.python.cz">GitHubu</a>
+                            <br>
+                            Organizuj <a href="http://pyladies.cz/stan_se/">PyLadies</a>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <h2>Licence</h2>
+                        <p>
+                            <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+        
+
+    </body>
+</html>
